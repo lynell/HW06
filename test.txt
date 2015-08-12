@@ -1,0 +1,11 @@
+import os
+def has_no_e(line):
+    #I have used the words.txt file provided for HW05
+    print os.getcwd()
+    count = 0
+    fin = open("test.txt","r")
+    for line in fin:
+        if "e" in line:
+            print False
+        else:
+            print True

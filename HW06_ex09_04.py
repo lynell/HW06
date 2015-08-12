@@ -15,6 +15,15 @@
 #       3:
 ##############################################################################
 # Imports
+def uses_only(word, letters):
+    for i in word:
+        if i not in letters:
+            return False
+        else:
+            return True
+    
+
+
 
 # Body
 
@@ -22,6 +31,11 @@
 ##############################################################################
 def main():
     pass  # Call your function(s) here.
-
+    f = open("words.txt","r")
+    count = 0
+    for line in f:
+        if uses_only(line,"acefhlo"):
+            count += 1
+    print "The number of words that only contain acefhlo are:  " + str(count)
 if __name__ == '__main__':
     main()
